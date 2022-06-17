@@ -10,5 +10,5 @@ This is an example project for module federation with vite using [this federatio
 
 - Configure ports on all added module projects. Exposed ports must match host configuration
 - Build remote projects (all but `vite-federation-host`): `yarn build`
-- Run `serve -s -C -p [port]` for each project to expose federated modules
+- Run `serve -s -C -p [port] dist` for each project to expose federated modules
 - Start dev server in host project with `yarn dev`

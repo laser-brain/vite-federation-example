@@ -16,12 +16,18 @@ export default defineConfig({
           format: "esm",
           from: "vite",
         },
+        // button: {
+        //   external: "http://localhost:5001/assets/remoteEntry.js",
+        //   externalType: "url",
+        //   format: "esm",
+        //   from: "vite",
+        // },
         button: {
-          external: "http://localhost:5001/assets/remoteEntry.js",
+          external: "http://localhost:5003/assets/remoteEntry.js",
           externalType: "url",
           format: "esm",
           from: "vite",
-        },
+        }
       },
       shared: ["vue"],
     }),
