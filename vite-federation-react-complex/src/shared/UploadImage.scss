@@ -1,0 +1,50 @@
+$imageHeight: 256px;
+
+.upload-image {
+  .container {
+    input {
+      display: 'none';
+    }
+  }
+
+  .edit-image {
+    position: 'relative';
+    height: $imageHeight;
+
+    img {
+      z-index: -1;
+      height: $imageHeight;
+    }
+
+    svg {
+      font-size: '8em';
+      cursor: 'pointer';
+      &.delete {
+        position: 'absolute';
+        color: 'red';
+        opacity: 0;
+        @media screen and (max-width: 768px) {
+          opacity: 1;
+          fontsize: '4em';
+          marginbottom: '-20px';
+          marginright: '20px';
+          bottom: 0;
+          right: 0;
+        }
+      }
+    }
+
+    :hover {
+      img {
+        opacity: 0.2;
+      }
+      
+      svg.delete {
+        opacity: 1;
+        :hover {
+          transform: 'scale(1.1)';
+        }
+      }
+    }
+  }
+}

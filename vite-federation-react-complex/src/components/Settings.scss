@@ -1,0 +1,32 @@
+$margin50: 8px;
+
+.scope__settings-container {
+  position: relative;
+  .container {
+    width: '50vw';
+    @media screen and (max-width: 768px) {
+      width: '100vw';
+    }
+  }
+
+  .full-width {
+    width: 100%;
+  }
+
+  .wide__half-width {
+    width: calc(50% - $margin50);
+
+    @media screen and (max-width: 768px) {
+      margin-right: 0;
+      margin-bottom: $margin50;
+      width: '100%';
+    }
+
+    &.left {
+      margin-right: $margin50;
+    }
+    &.right {
+      margin-left: $margin50;
+    }
+  }
+}
